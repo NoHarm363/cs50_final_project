@@ -1,7 +1,8 @@
 .nav {
 	background: #232323;
 	height: 60px;
-  	width: auto; /*ere*/
+	display: block;
+  	width: auto;
 }
 
 .nav li {
