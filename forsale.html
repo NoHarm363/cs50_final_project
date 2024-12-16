@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+
+{% block title %}
+    Index.html
+{% endblock %}
+
+{% block main %}
+{% for house_num in houses %}
+<li class="item">
+    <img src="https://www.maramani.com/cdn/shop/files/4-bedrooommodernbungalowhouse-ID14511-Image01.jpg?v=1696423958&width=2048">
+    <p>House {{ house_num }} </p>
+</li>
+{% endfor %}
+{% endblock %}
