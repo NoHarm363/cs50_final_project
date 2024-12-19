@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index.html
+{% endblock %}
+
+{% block main %}
+<form action="/admin/add_property" method="post">
+    <div class="mb-3">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="property_img_url" placeholder="Property Image URL" type="text">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="property_name" placeholder="Property Name" type="text">
+    </div>
+    <button class="btn btn-primary" type="submit">Add</button>
+</form>
+
+{% endblock %}
