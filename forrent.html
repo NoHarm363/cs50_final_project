@@ -1,11 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment</title>
-</head>
-<body>
-    <img src="https://media1.tenor.com/m/tC5i46ntiDsAAAAd/life-could-be-a-dream.gif">
-</body>
-</html> 
+{% extends "layout.html" %}
+
+{% block title %}
+    forrent.html
+{% endblock %}
+
+{% block main %}
+<nav class="product-menu">
+  <div class="search-input">
+  <input type="text" placeholder="Search...">
+  <label for="email" rel="tooltip" title="email"></label>
+  </div>
+  <ul>
+    <li class="has-dropdown">
+      <li class="selected"><a href="#"><i class="material-icons">home</i>All Properties</a></li>
+      <h><b>Residential</b></h>
+      <a><i class="material-icons">work</i>Bungalow/Villa</a>
+    </li>
+    <li><a><i class="material-icons">accessibility</i>Apartment/Condo/Service Resident</a></li>
+    <li><a><i class="material-icons">hearing</i>Semi-Detached House</a></li>
+    <li><a><i class="material-icons">add_circle_outline</i>Terrace/Link House</a></li>
+    <h><b>Commercial</b></h>
+    <li><a><i class="material-icons">build</i>Commercial</a></li>
+    <li><a><i class="material-icons">markunread_mailbox</i>Industrial</a></li>
+    <li><a><i class="material-icons">memory</i>Agriculture Land</a></li>
+    <li><a><i class="material-icons">power_input</i>Others</a></li>
+</nav>
+<div class="container group">
+ <div class="breadcrumb"></div>
+ <ul class="product-grid group">
+{% for house in for_rent_houses %}
+<li class="item">
+    <img src="{{ house.img_url }}">
+    <p> {{ house.property_name }} </p>
+</li>
+{% endfor %}
+</ul>
+</div>
+{% endblock %}
