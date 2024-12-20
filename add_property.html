@@ -7,8 +7,28 @@
 {% block main %}
 <form action="/admin/add_property" method="post">
     <div class="mb-3">
-        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="property_img_url" placeholder="Property Image URL" type="text">
-        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="property_name" placeholder="Property Name" type="text">
+        <div>
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="property_img_url" placeholder="Property Image URL" type="text">
+        </div>
+        <div>
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="property_name" placeholder="Property Name" type="text">
+        </div>
+        <div>
+            <select name="PropertyType">
+            {% for type in propertyType %}
+                <option value="{{ type }}">{{ type }}</option>
+            {% endfor %}
+            </select>
+        </div>
+            <label>Choose your Sale Status</label>
+        <div>
+            {% for status in saleStatus %}
+            <label>
+                <p>{{ status }}</p>
+                <input type="checkbox" name="SaleStatus" value="{{ status }}">
+            </label>
+            {% endfor %}
+        </div>
     </div>
     <button class="btn btn-primary" type="submit">Add</button>
 </form>
