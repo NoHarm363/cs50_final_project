@@ -207,8 +207,6 @@ def admin():
 def add_property():
     indexPropertyList = []
 
-    if session['admin'] == 1:
-
     if request.method == 'GET':
         PropertyTypeList = ['Bungalow/Villa', 'Apartment/Condo/Service', 'Semi-Detached House', 'Terrace/Link House', 'Commercial', 'Industrial', 'Agriculture Land', 'Others']
         SaleStatusList = ['For Sale', 'For Rent', 'Condo', 'Mortgage', 'Commercial']
@@ -286,6 +284,13 @@ def register():
         db.execute(f"INSERT INTO users (username, password) VALUES ({username,password});")
 
         return render_template('login.html')
+    
+@app.route("/admin/viewUser", methods=["GET","POST"])
+def viewUser():
+    if request.method == 'GET':
+        query = db.execute("SELECT * FROM users;")
+        print(query)
+        return render_template('viewU.html',query=query)
     
 @app.route("/logout", methods=["GET","POST"])
 def logout():
