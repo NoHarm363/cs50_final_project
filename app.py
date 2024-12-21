@@ -29,25 +29,18 @@ def index():
         with open("index_property.txt", "r") as file:
             index_property = file.read()
             indexPropertyDict = json.loads(index_property)
-            print(indexPropertyDict)
             return render_template("homepage.html", houses=indexPropertyDict)
 
 @app.route("/payment", methods=["GET", "POST"])
 def payment():
     if request.method == "GET":
         return render_template("payment.html")
-
-#parameter after the second /
-@app.route("/propDescription", methods=["GET", "POST"])
-def propDescription():
-    if request.method == "GET":
-        return render_template("prop_desc.html")
     
 #parameter after the second /
 @app.route("/propDetail/", methods=["GET", "POST"])
 def propDet():
     if request.method == "GET":
-        return render_template("propDet.html")
+        return render_template("prop_desc.html")
         
 @app.route("/forsale", methods=["GET", "POST"])
 def forsale():
@@ -123,7 +116,7 @@ def bungalow_villa():
             index_property = file.read()
             indexPropertyDict = json.loads(index_property)
             for property in indexPropertyDict:
-                if bungalow_villa in property["sale_status"]:
+                if bungalow_villa in property["property_type"]:
                     bungalow_villa_list.append(property)
             return render_template("bungalow_villa.html", bungalow_villa_houses=bungalow_villa_list)
 
@@ -136,7 +129,7 @@ def apartment_condo_service():
             index_property = file.read()
             indexPropertyDict = json.loads(index_property)
             for property in indexPropertyDict:
-                if apartment_condo_service in property["sale_status"]:
+                if apartment_condo_service in property["property_type"]:
                     apartment_condo_service_list.append(property)
             return render_template("apartment_condo_service.html", apartment_condo_service_houses=apartment_condo_service_list)
 
@@ -149,7 +142,7 @@ def semi_detached_house():
             index_property = file.read()
             indexPropertyDict = json.loads(index_property)
             for property in indexPropertyDict:
-                if semi_detached_house in property["sale_status"]:
+                if semi_detached_house in property["property_type"]:
                     semi_detached_house_list.append(property)
             return render_template("semi_detached_house.html", semi_detached_house_houses=semi_detached_house_list)
 
@@ -162,7 +155,7 @@ def terrace_link_house():
             index_property = file.read()
             indexPropertyDict = json.loads(index_property)
             for property in indexPropertyDict:
-                if terrace_link_house in property["sale_status"]:
+                if terrace_link_house in property["property_type"]:
                     terrace_link_house_list.append(property)
             return render_template("terrace_link_house.html", terrace_link_house_houses=terrace_link_house_list)
 
@@ -175,10 +168,36 @@ def industrial():
             index_property = file.read()
             indexPropertyDict = json.loads(index_property)
             for property in indexPropertyDict:
-                if industrial in property["sale_status"]:
+                if industrial in property["property_type"]:
                     industrial_house_list.append(property)
             return render_template("industrial.html", industrial_houses=industrial_house_list)
+
+@app.route("/agriculture_land", methods=["GET", "POST"])
+def agriculture_land():
+    if request.method == 'GET':
+        agriculture_land = 'Agriculture Land'
+        agriculture_land_list = []
+        with open("index_property.txt", "r") as file:
+            index_property = file.read()
+            indexPropertyDict = json.loads(index_property)
+            for property in indexPropertyDict:
+                if agriculture_land in property["property_type"]:
+                    agriculture_land_list.append(property)
+            return render_template("agriculture_land.html", agriculture_lands=agriculture_land_list)
         
+@app.route("/others", methods=["GET", "POST"])
+def others():
+    if request.method == 'GET':
+        others = 'Others'
+        others_list = []
+        with open("index_property.txt", "r") as file:
+            index_property = file.read()
+            indexPropertyDict = json.loads(index_property)
+            for property in indexPropertyDict:
+                if others in property["property_type"]:
+                    others_list.append(property)
+            return render_template("others.html", others=others_list)
+                       
 @app.route("/admin", methods=["GET", "POST"])
 def admin():
     if request.method == 'GET':
@@ -187,6 +206,9 @@ def admin():
 @app.route("/admin/add_property", methods=["GET", "POST"])
 def add_property():
     indexPropertyList = []
+
+    if session['admin'] == 1:
+
     if request.method == 'GET':
         PropertyTypeList = ['Bungalow/Villa', 'Apartment/Condo/Service', 'Semi-Detached House', 'Terrace/Link House', 'Commercial', 'Industrial', 'Agriculture Land', 'Others']
         SaleStatusList = ['For Sale', 'For Rent', 'Condo', 'Mortgage', 'Commercial']
@@ -242,11 +264,33 @@ def login():
         if len(query) == 1:
             print(query)
             session["username"] = username
-            session["admin"] = admin 
-            return render_template('login.html')
+            session["admin"] = query[0]['ADMIN'] 
+            return redirect('/')
         
         else:
             return render_template('login.html')
+        
+@app.route("/register", methods=["GET","POST"])
+def register():
+    if request.method == 'GET':
+        return render_template('register.html')
+
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        cPassword = request.form['cPassword']
+        
+        if password != cPassword:
+            return render_template('regFail.html')
+
+        db.execute(f"INSERT INTO users (username, password) VALUES ({username,password});")
+
+        return render_template('login.html')
+    
+@app.route("/logout", methods=["GET","POST"])
+def logout():
+    session.clear()
+    return redirect('/')
 
 
         
