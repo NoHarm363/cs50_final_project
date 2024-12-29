@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    mortgage.html
+{% endblock %}
+
+{% block main %}
+<nav class="product-menu">
+  <div class="search-input">
+  <input type="text" placeholder="Search...">
+  <label for="email" rel="tooltip" title="email"></label>
+  </div>
+  <ul>
+    <li class="has-dropdown"></li>
+    <li><a href="/"><i class="material-icons">home</i>All Properties</a></li>
+    <h><b>Residential</b></h>
+    <li><a href="/bungalow_villa"><i class="material-icons">villa</i>Bungalow/Villa</a></li>
+    <li><a href="/apartment_condo_service"><i class="material-icons">apartment</i>Apartment/Condo/Service Resident</a></li>
+    <li><a href="/semi_detached_house"><i class="material-icons">house</i>Semi-Detached House</a></li>
+    <li class="selected"><a href="/terrace_link_house"><i class="material-icons">holiday_village</i>Terrace/Link House</a></li>
+    <h><b>Commercial</b></h>
+    <li><a href="/commercial"><i class="material-icons">store</i>Commercial</a></li>
+    <li><a href="/industrial"><i class="material-icons">factory</i>Industrial</a></li>
+    <li><a href="/agriculture_land"><i class="material-icons">agriculture</i>Agriculture Land</a></li>
+    <li><a href="/others"><i class="material-icons">other_houses</i>Others</a></li>
+</ul>
+</nav>
+<div class="container group">
+ <div class="breadcrumb"></div>
+ <ul class="product-grid group">
+{% for house in terrace_link_house_houses %}
+<li class="item">
+    <img src="{{ house.img_main_url }}">
+    <p> {{ house.property_name }} </p>
+</li>
+{% endfor %}
+</ul>
+</div>
+{% endblock %}

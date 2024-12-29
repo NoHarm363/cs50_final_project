@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    mortgage.html
+{% endblock %}
+
+{% block main %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=location_on" />
+
+<nav class="product-menu">
+  <div class="search-input">
+  <input type="text" placeholder="Search...">
+  <label for="email" rel="tooltip" title="email"></label>
+  </div>
+  <ul>
+    <li class="has-dropdown"></li>
+    <li class="selected"><a href="/overview"><i class="material-icons">home</i>All Region</a></li>
+    <h><b>Sort by Region</b></h>
+    <li><a href="/overview/nevada_agent"><i class="material-icons">location_on</i>Nevada</a></li>
+    <li><a href="/overview/chicago_agent"><i class="material-icons">location_on</i>Chicago</a></li>
+    <li><a href="/overview/texas_agent"><i class="material-icons">location_on</i>Texas</a></li>
+    <li><a href="/overview/washington_agent"><i class="material-icons">location_on</i>Washington DC</a></li>
+    <li><a href="/overview/los_angeles_agent"><i class="material-icons">build</i>Los Angeles</a></li>
+    <li><a href="/overview/california_agent"><i class="material-icons">markunread_mailbox</i>California</a></li>
+    <li><a href="/overview/san_francisco_agent"><i class="material-icons">memory</i>San Francisco</a></li>
+    <li><a href="/overview/new_jersey_agent"><i class="material-icons">power_input</i>New Jersey</a></li>
+</ul>
+</nav>
+<div class="container group">
+ <div class="breadcrumb"></div>
+ <ul class="product-grid group">
+
+{% for agent in agents %}
+    <li class="item">
+    <img src="{{ agent['agent_img'] }}">
+                <h5>{{ agent['agent_name'] }}</h5>
+                <p>Certified Property Agent<br><span class="verify"> (Agent ID Checked <i class="material-icons">check</i>)</span><br>
+                    Dynasty Executive Inc <br>
+                    Firm: E - 10572, {{ agent['agent_code'] }} </p>
+    </li>
+{% endfor %}
+</ul>
+</div>
+
+<style>
+   .item {
+    background-color: #575757!important;
+    border-radius: 20px!important;
+    border: 1px solid black;
+}
+.item h5{
+    color: #d4af37!important;
+    font-size: 1.5rem!important;
+    border: 2px bottom red!important;
+    text-align: center;
+}
+.item p {
+    color: #ffffff!important;
+    text-align: center;
+}
+
+.item img {
+        height: 190px!important;
+        width: 70!important;
+        border-radius: 20px 20px 0px 0px!important;
+    }
+</style>
+
+
+{% endblock %}

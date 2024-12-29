@@ -1,0 +1,118 @@
+:root {
+  --iq-primary: #000000;
+  --iq-secondary: var(--iq-secondary);
+  --iq-accent: #d4af37;
+  --iq-neutral: #e5e5e5;
+  --iq-neutral2: #575757;
+  --iq-success: #78C091;
+  --iq-info: #7EE2FF;
+  --iq-warning: #FF9770;
+   }
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+* a {
+  color: var(--iq-neutral);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+* a:hover {
+  color: var(--iq-accent);
+}
+.footer-section {
+  background: #151414;
+  position: relative;
+}
+.footer-cta {
+  border-bottom: 1px solid var(--iq-neutral);
+}
+.single-cta i {
+  color: var(--iq-accent);
+  font-size: 30px;
+  float: left;
+  margin-top: 8px;
+}
+.cta-text {
+  padding-left: 15px;
+  display: inline-block;
+}
+.cta-text h4 {
+  color: var(--iq-secondary);
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.cta-text span {
+  color: var(--iq-neutral);
+  font-size: 15px;
+}
+.footer-content {
+  position: relative;
+  z-index: 2;
+}
+.footer-pattern img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 330px;
+  background-size: cover;
+  background-position: 100% 100%;
+}
+.footer-logo {
+  margin-bottom: 30px;
+}
+.footer-logo img {
+    max-width: 200px;
+}
+.footer-text p {
+  margin-bottom: 14px;
+  font-size: 14px;
+      color: var(--iq-neutral);
+  line-height: 28px;
+}
+
+
+.footer-widget-heading h3 {
+  color: var(--iq-secondary);
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  position: relative;
+}
+.footer-widget-heading h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  height: 2px;
+  width: 50px;
+  background: var(--iq-accent);
+}
+.footer-widget ul li {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  margin-bottom: 12px;
+}
+.footer-widget ul li a:hover{
+  color: var(--iq-accent);
+}
+.footer-widget ul li a {
+  color: var(--iq-neutral);
+  text-transform: capitalize;
+}
+
+
+.footer-menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer-menu li:hover a{
+  color: var(--iq-accent);
+}
+.footer-menu li a {
+  font-size: 14px;
+  color: var(--iq-neutral);
+}

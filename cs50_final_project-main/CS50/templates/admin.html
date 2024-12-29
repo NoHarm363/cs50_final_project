@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index.html
+{% endblock %}
+
+{% block main %}
+<!-- HTML !-->
+<nav class="product-menu">
+    <div class="search-input">
+    <input type="text" placeholder="Search...">
+    <label for="email" rel="tooltip" title="email"></label>
+    </div>
+    <ul>
+      <li class="has-dropdown">
+        <li class="selected"><a href="#"><i class="material-icons">home</i>All Properties</a></li>
+        <h><b>Residential</b></h>
+        <a><i class="material-icons">villa</i>Bungalow/Villa</a>
+      </li>
+      <li><a><i class="material-icons">apartment</i>Apartment/Condo/Service Resident</a></li>
+      <li><a><i class="material-icons">house</i>Semi-Detached House</a></li>
+      <li><a><i class="material-icons">holiday_village</i>Terrace/Link House</a></li>
+      <h><b>Commercial</b></h>
+      <li><a><i class="material-icons">store</i>Commercial</a></li>
+      <li><a><i class="material-icons">factory</i>Industrial</a></li>
+      <li><a><i class="material-icons">agriculture</i>Agriculture Land</a></li>
+      <li><a><i class="material-icons">other_houses</i>Others</a></li>
+  
+     
+  </nav>
+  <div class="container group">
+   <div class="breadcrumb"></div>
+<div>
+<button class="button-85" role="button"><a href="/admin/add_property">Add Property</a></button>
+</div>
+</div>
+{% endblock %}
