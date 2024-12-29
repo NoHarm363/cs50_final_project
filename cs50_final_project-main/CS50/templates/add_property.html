@@ -1,0 +1,130 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Index.html
+{% endblock %}
+
+{% block main %}
+<form action="/admin/add_property" method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+        <!--<div>
+            <label>Your Property Main Image File for homepage
+                <input type="file" name="MainImage" accept="image/*" > 
+            </label>
+        </div>-->
+        <h1 style="justify-self: center;">ADD PROPERTY YE CUNT</h1>
+        <div>
+
+            <div style="justify-content: center; display: grid;">
+                <label>Your Property Image Files for Property Description
+                    <input type="file" name="PropDetImages" accept="image/*" multiple>
+                </label>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; margin-left: 3%; margin-right: 3%;">
+                <div>
+                    <div>
+                        <p><label>Property Name</label></p>
+                        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="property_name"
+                            placeholder="Property Name" type="text">
+                    </div>
+
+                    <div>
+                        <p><label>Property Description</label></p>
+                        <input autocomplete="off" autofocus class="form-control mx-auto w-auto"
+                            name="property_description" placeholder="Property Description" type="text">
+                    </div>
+
+                    <div>
+                        <p><label>Property Price</label></p>
+                        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="price"
+                            placeholder="Property's Price" type="text">
+                    </div>
+
+                    <div>
+                        <p><label>Property lot size</label></p>
+                        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="lot_size"
+                            placeholder="Property's lot size" type="number">
+                    </div>
+
+                    <div>
+                        <p><label>Number of property bedrooms</label></p>
+                        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="bedroom_num"
+                            placeholder="Property's bedroom number" type="number">
+                    </div>
+
+                    <div>
+                        <p><label>Number of property bathrooms</label></p>
+                        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="bathroom_num"
+                            placeholder="Property's bathroom number" type="number">
+                    </div>
+
+                    <div>
+                        <p><label>Property Type</label></p>
+                        <select name="PropertyType">
+                            {% for type in propertyType %}
+                            <option value="{{ type }}">{{ type }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div>
+                        <p><label>Property Location</label></p>
+                        <select name="Property's Location">
+                            {% for location in locations %}
+                            <option value="{{ location }}">{{ location }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div>
+                        <p><label>Agent in charge</label></p>
+                        <select name="ResponsibleAgent">
+                            {% for agent in responsible_agents %}
+                            <option value="{{ agent }}">{{ agent }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <p><label>Choose your Sale Status</label></p>
+
+                    {% for status in saleStatus %}
+                    <label>
+                        <p>{{ status }}</p>
+                        <input type="checkbox" name="SaleStatus" value="{{ status }}">
+                    </label>
+                    {% endfor %}
+                </div>
+                <div>
+                    <p><label>Choose your Tenure Type</label></p>
+                    <div>
+                        {% for tenure in tenureType %}
+                        <label>
+                            <p>{{ tenure }}</p>
+                            <input type="checkbox" name="TenureType" value="{{ tenure }}">
+                        </label>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div>
+                    <p><label>Choose your facilities</label></p>
+                    <div>
+                        {% for facility in facilities %}
+                        <label>
+                            <p>{{ facility }}</p>
+                            <input type="checkbox" name="Facilities" value="{{ facility }}">
+                        </label>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="display: grid; justify-content: center;">
+        <button class="btn btn-primary" type="submit"
+            style="background-color: green; color: white;">Add</button>
+    </div>
+</form>
+
+{% endblock %}

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Property Description</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap.min.css'><link rel="stylesheet" href="../static/css/prop_desc.css"><link rel="stylesheet" href="../static/css/header.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="/static/script.js"></script>
+</head>
+
+
+<body>
+
+  <header class="header">
+    {% block header %}
+  <nav class="header-nav group">
+    <div class="nav--container">
+      <div class="logo">
+        <a href="/"><img height="36px" width="auto" src="../static/img/DynastyExecutive.png" alt="DynastyExecutive Logo"></a>
+      </div>
+      <ul class="nav--primary">  
+        <div style="position: fixed; z-index: -99; width: 0%; height: 0%">
+          <iframe frameborder="0" height="100%" width="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&controls=0&showinfo=0&autohide=1&loop=1" type="audio/mpeg">
+          </iframe>
+        </div>
+        <embed height="0" width="0"
+  src="http://youtube.googleapis.com/v/dQw4w9WgXcQ&autoplay=1&loop=1" />
+        </audio>
+        <li class="active"><a class="has-submenu" href="/properties/">Properties</a></li> 
+        <li><a class="has-submenu" href="/find-agent/">Find Agent</a></li>
+        <li><a class="has-submenu" href="/guides/">Guides</a></li>
+        <li><a class="has-submenu" href="/sitemap/">More +</a></li>
+        <li><a href="/contact/"><i class="material-icons icon--contact">email</i>Contact</a></li>
+      </ul>
+      <ul class="tools">
+        <li><a href="#"><i class="material-icons">date_range</i></a></li>
+        {% if session['admin'] == 1 or session['admin'] == 0 %}
+        <li class="has-dropdown"><a href="/logout">{{ session['username'] }}</a>
+        {% else %}
+        <li class="has-dropdown"><a href="/login"><i class="material-icons">account_circle</i></a>
+        {% endif %}
+        <ul>
+          <li></li>
+        </ul>
+        </li>
+        <li><a href="#"><i class="material-icons">shopping_cart</i></a></li>
+      </ul>
+    </div>
+    <div class="nav--secondary">
+      <ul data-menu="properties" class="active menu menu-1">
+        {% if session['admin'] == 1 %}
+        <li><a href="/admin/add_property"><i class="material-icons"></i>Add Property</a></li>
+        <li><a href="/admin/viewUser"><i class="material-icons"></i>View Users</a></li>
+        {% else %}
+        <li><a href="/forsale">For Sale</a></li>
+        <li><a class="active" href="/forrent">For Rent</a></li>
+        <li><a href="/condo">Condo</a></li>
+        <li><a href="mortgages">Mortgages</a></li>
+        <li><a href="/commercial">Commercial</a></li>
+        {% endif %}
+
+      </ul>
+      <ul data-menu="find-agent" class="menu menu-2">
+        <li><a href="/overview">Overview</a></li>
+        <li><a href="#">dunno</a></li>
+        <li class="has-dropdown">
+          <a href="#">Region</a>
+          <ul class="drop2">
+            <li style="color: black;"><a href="#">Selangor</a></li>
+            <li><a href="#">Kuala Lumpur</a></li>
+            <li><a href="#">Seremban</a></li>
+            <li><a href="#">Johor</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul data-menu="guides" class="menu menu-3">
+        <li><a href="#">Buying</a></li>
+        <li><a href="#">Home Financing</a></li>
+        <li><a href="#">Renting</a></li>
+        <li><a href="#">Legal & Tax</a></li>
+        <li class="has-dropdown">
+          <a href="#">Support</a>
+          <ul>
+            <li><a href="#">Tether Guide</a></li>
+            <li><a href="#">Tool Safety Roadmap</a></li>
+            <li><a href="#">Free Consultation</a></li>
+          </ul>
+        </li>
+
+      </ul>
+      <ul data-menu="sitemap" class="menu menu-4">
+        <li><a href="#">About</a></li>
+        <li><a href="#">AskGuru</a></li>
+        <li><a href="#">News</a></li>
+      </ul>
+
+    </div>
+  </nav>
+  {% endblock %}
+  </header>
+
+<!-- partial:index.partial.html -->
+<div class="container-fluid">
+<div class="row-fluid">
+<div class="span12">
+
+    <div class="page-header">
+        <p>DynastyExecutive.html > Property for Sale > Bungalow/Villa > House 1</p>
+    </div>
+        
+    <div class="carousel slide" id="myCarousel">
+        <div class="carousel-inner">
+ 
+            <div class="item active">
+            
+                <div class="bannerImage">
+                    <a href="#"><img src="https://media.designcafe.com/wp-content/uploads/2022/07/15170350/luxury-home-design-on-budget.jpg" alt=""></a>
+                </div>
+                            
+
+                                                         
+            </div><!-- /Slide1 --> 
+
+            <div class="item">
+            
+                <div class="bannerImage">
+                    <a href="#"><img src="https://5.imimg.com/data5/SELLER/Default/2022/6/VS/WT/RT/119755681/bedroom-interior-designing-500x500.png" alt=""></a>
+                </div>
+                            
+
+                                                         
+            </div><!-- /Slide2 -->             
+
+            <div class="item">
+            
+                <div class="bannerImage">
+                    <a href="#"><img src="https://s3-ap-southeast-1.amazonaws.com/atap-main/project-m/88ad2e7c-9dd0-488d-9d56-8e0b67657133/double-storey-bandar-utama-modern-chic.jpg" alt=""></a>
+                </div>
+                            
+
+              </div>                              
+            </div><!-- /Slide2 -->                      
+            <div class="caption row-fluid">
+                <div class="span4"><h3>hasta de villa<br><span class="address">Geylang, Singapore</span></h3>
+                  <p class="price">RM2,300,000</p>
+                 
+                <a class="btn btn-mini" href="#desc">&raquo; Read More</a>
+                </div>                	
+                <div class="span8">             
+                   <table class="catable"><thead>
+                    <tr>
+                      <th class="catable-0lax" colspan="2"><span style="font-weight:bold">Property Details</span></th>
+                      <th class="catable-0lax"><span style="font-weight:bold">Facilities</span></th>
+                    </tr></thead>
+                  <tbody>
+                    <tr>
+                      <td class="catable-0lax">Property Type</td>
+                      <td class="catable-alax">2-storey Terrace House</td>
+                      <td class="catable-alax">Parking</td>
+                    </tr>
+                    <tr>
+                      <td class="catable-0lax">Tenure Type</td>
+                      <td class="catable-alax">Freehold</td>
+                      <td class="catable-alax">Playground</td>
+                    </tr>
+                    <tr>
+                      <td class="catable-0lax">Land Title</td>
+                      <td class="catable-alax">Non Bumi Lot</td>
+                      <td class="catable-alax">Minimart</td>
+                    </tr>
+                  </tbody>
+                  </table>
+                </div>
+            </div>
+            <div class="description row-fluid" id="desc">
+             
+              <div class="span8">                      <table class="catable"><thead>
+                <tr>
+                  <th class="catable-0lax"><span style="font-weight:bold"><i class="material-icons">crop</i> Lot Size (Sq.ft)</span></th>
+                  <th class="catable-0lax"><span style="font-weight:bold"><i class="material-icons">bed</i> Bedroom</span></th>
+                  <th class="catable-0lax"><span style="font-weight:bold"><i class="material-icons">shower</i> Bathroom</span></th>
+                </tr></thead>
+              <tbody>
+                <tr>
+                  <td class="catable-alax">655</td>
+                  <td class="catable-alax">2</td>
+                  <td class="catable-alax">3</td>
+                </tr>
+              </tbody>
+              </table>         <p>This stunning 2-storey terrace house offers modern living with comfort and style in a sought-after neighborhood. Perfect for families or professionals, this home balances contemporary design with practical functionality.<br>
+
+                Exterior: The house features a sleek façade with clean lines, large windows, and a charming front porch. A small landscaped garden and a covered carport for two vehicles complete the exterior appeal.
+                Ground Floor: Upon entering, you're greeted by an open-plan living and dining area bathed in natural light. The modern kitchen boasts high-quality countertops, ample storage, and built-in appliances. A guest bedroom or home office and a shared bathroom add convenience. Sliding doors lead to a cozy backyard, perfect for outdoor dining or gardening.
+                Upper Floor: The second level houses three spacious bedrooms, including a master suite with an en-suite bathroom and a private balcony. The other two bedrooms share a well-appointed common bathroom. All bedrooms have built-in wardrobes, and large windows offer views of the quiet street or backyard.<br>
+                Additional Features:<br>
+                Fully tiled and air-conditioned throughout.<br>
+                Smart home integration for lights, climate control, and security.<br>
+                Close to schools, shopping centers, parks, and public transport.<br>
+                Whether you're looking to settle down or make a solid investment, this property is a perfect blend of comfort, style, and convenience.</p>
+          
+              </div>
+              <div class="span4"><a><h4>Contact Agent <i class="material-icons">call</i></h4></a><img src="https://i.pinimg.com/736x/43/97/0e/43970e7cca9473984f50136a4c6c20ff.jpg">
+                <h5><i class="material-icons">work</i>Prinz Eugen</h5>
+                <p>Property Agent<br><span class="verify"> (Agent ID Checked <i class="material-icons">check</i>)</span><br>
+                    Dynasty Executive Inc <br>
+                    Firm: E - 10572, REN 45281</p>
+                </div>                	
+          </div>
+        
+        <div class="control-box">                            
+            <a data-slide="prev" href="#myCarousel" class="carousel-control left">‹</a>
+            <a data-slide="next" href="#myCarousel" class="carousel-control right">›</a>
+        </div><!-- /.control-box -->   
+                              
+    </div><!-- /#myCarousel -->
+        
+</div><!-- /.span12 -->          
+</div><!-- /.row --> 
+</div><!-- /.container -->
+
+                            
+
+<!-- partial -->
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap.min.js'></script><script  src="../static/prop_desc.js"></script>
+
+</body>
+</html>
