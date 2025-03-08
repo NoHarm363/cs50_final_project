@@ -1,115 +1,93 @@
 [
+    {"agent_name": "Jaydon", 
+    "agent_img": "https://media.istockphoto.com/id/1682296067/photo/happy-studio-portrait-or-professional-man-real-estate-    agent-or-asian-businessman-smile-for.jpg?s=612x612&w=0&k=20&c=9zbG2-9fl741fbTWw5fNgcEEe4ll-JegrGlQQ6m54rg=", 
+    "agent_code": "REN 45281", 
+    "agent_work_states": ["California", "Los Angeles", "San Francisco"], 
+    "property_name_in_charge": ["Dowen Tan's House"]
+    }, 
+
+    {"agent_name": "CS50 Duck", 
+    "agent_img": "https://cs50.gallerycdn.vsassets.io/extensions/cs50/ddb50/1.1.2/1691002683906/Microsoft.VisualStudio.Services.Icons.Default",     "agent_code": "REN 45282", 
+    "agent_work_states": ["Washington DC"], 
+    property_name_in_charge": []
+    }, 
+
     {
-        "agent_name": "Prinz Eugen",
-        "agent_img": "https://i.pinimg.com/736x/43/97/0e/43970e7cca9473984f50136a4c6c20ff.jpg",
-        "agent_code": "REN 45281",
-        "agent_work_states": [
-            "California",
-            "Los Angeles",
-            "San Francisco"
-        ],
-        "property_name_in_charge": [
-            "Dowen Tan's House"
-        ]
+    "agent_name": "Cassandra", 
+    "agent_img": "https://media.istockphoto.com/id/1318858332/photo/headshot-portrait-of-smiling-female-employee-posing-in-office.jpg?s=612x612&w=0&k=20&c=2qUeKwMylyZJueQnvpg22iCA758VcM8gF_i8MQih3aw=", 
+    "agent_code": "REN 45283", 
+    "agent_work_states": ["Chicago"], 
+    "property_name_in_charge": []
     },
+
     {
-        "agent_name": "CS50 Duck",
-        "agent_img": "https://cs50.gallerycdn.vsassets.io/extensions/cs50/ddb50/1.1.2/1691002683906/Microsoft.VisualStudio.Services.Icons.Default",
-        "agent_code": "REN 45282",
-        "agent_work_states": [
-            "Washington DC"
-        ],
-        "property_name_in_charge": []
-    },
+    "agent_name": "Holden", 
+    "agent_img": "https://media.istockphoto.com/id/1300512215/photo/headshot-portrait-of-smiling-ethnic-businessman-in-office.jpg?s=612x612&w=0&k=20&c=QjebAlXBgee05B3rcLDAtOaMtmdLjtZ5Yg9IJoiy-VY=", 
+    "agent_code": "REN 45284", 
+    "agent_work_states": ["Texas"], 
+    "property_name_in_charge": ["Coal Mine Rise"]
+    }, 
+
     {
-        "agent_name": "Frostleaf",
-        "agent_img": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/c5bd531c-4abf-4126-b9b6-e2d8e42f6626/width=1200/c5bd531c-4abf-4126-b9b6-e2d8e42f6626.jpeg",
-        "agent_code": "REN 45283",
-        "agent_work_states": [
-            "Chicago"
-        ],
-        "property_name_in_charge": []
-    },
+    "agent_name": "Johnson", 
+    "agent_img": "https://media.istockphoto.com/id/1367391515/photo/portrait-of-successful-businessman.jpg?s=612x612&w=0&k=20&c=COBjoH3I-mJcim_w8frbEfhFHW9pEvZf4FV_jjby3xo=", 
+    "agent_code": "REN 45285", 
+    "agent_work_states": ["Texas"], 
+    "property_name_in_charge": []
+    }, 
+
     {
-        "agent_name": "Texas",
-        "agent_img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-gcbLDEMxL7GJKmo11u5Ccakq5Vg7_62edw&s",
-        "agent_code": "REN 45284",
-        "agent_work_states": [
-            "Texas"
-        ],
-        "property_name_in_charge": []
-    },
+    "agent_name": "Christel", 
+    "agent_img": "https://media.istockphoto.com/id/655268584/photo/smiling-female-business-leader-with-arms-crossed.jpg?s=612x612&w=0&k=20&c=7UGd3wOL39nvrl2o4iRwhWZGXqDwfGMOk-Z9tQO3jWY=", 
+    "agent_code": "REN 45286", 
+    "agent_work_states": ["Los Angeles"], 
+    "property_name_in_charge": ["Prime Sherman Oaks Townhome"]
+    }, 
+
     {
-        "agent_name": "Negev",
-        "agent_img": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/201d7dd5-0fea-4b38-bf26-6e5d94539c76/width=450/grin.jpeg",
-        "agent_code": "REN 45285",
-        "agent_work_states": [
-            "Texas"
-        ],
-        "property_name_in_charge": []
-    },
+    "agent_name": "Benedict", 
+    "agent_img": "https://media.istockphoto.com/id/1388253782/photo/positive-successful-millennial-business-professional-man-head-shot-portrait.jpg?s=612x612&w=0&k=20&c=uS4knmZ88zNA_OjNaE_JCRuq9qn3ycgtHKDKdJSnGdY=", 
+    "agent_code": "REN 45287", 
+    "agent_work_states": ["Washington DC"], 
+    "property_name_in_charge": []
+    }, 
+    
     {
-        "agent_name": "Eren Jeager",
-        "agent_img": "https://static.promediateknologi.id/crop/0x648:1080x1711/0x0/webp/photo/p2/74/2024/08/30/Screenshot_2024-08-30-16-02-49-042_comtwitterandroid-3598212822.jpg",
-        "agent_code": "REN 45286",
-        "agent_work_states": [
-            "Los Angeles"
-        ],
-        "property_name_in_charge": []
-    },
+    "agent_name": "Joanna", 
+    "agent_img": "https://static.vecteezy.com/system/resources/thumbnails/035/719/706/small/ai-generated-female-real-estate-agent-in-front-of-house-for-realtor-real-estate-agent-free-photo.jpg", 
+    "agent_code": "REN 45288", 
+    "agent_work_states": ["Nevada"], 
+    "property_name_in_charge": ["Borgata Condominium"]
+    }, 
+
     {
-        "agent_name": "Washington",
-        "agent_img": "https://s1.zerochan.net/Washington.600.2810024.jpg",
-        "agent_code": "REN 45287",
-        "agent_work_states": [
-            "Washington DC"
-        ],
-        "property_name_in_charge": []
-    },
+    "agent_name": "Denise", 
+    "agent_img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUCnlSuEVINYasXoDXsOspTqE0pWvvaiZ4GQ&s",             
+    "agent_code": "REN 45289", 
+    "agent_work_states": ["Chicago"], 
+    "property_name_in_charge": ["3102 Birch Ln Townhome"]
+    }, 
+
     {
-        "agent_name": "Nevada",
-        "agent_img": "https://s1.zerochan.net/Nevada.%28Azur.Lane%29.600.2445132.jpg",
-        "agent_code": "REN 45288",
-        "agent_work_states": [
-            "Nevada"
-        ],
-        "property_name_in_charge": []
-    },
+    "agent_name": "Daniel", 
+    "agent_img": "https://img.freepik.com/free-photo/medium-shot-man-working-as-real-estate-agent_23-2151064844.jpg?semt=ais_hybrid", 
+    "agent_code": "REN 45290", 
+    "agent_work_states": ["California"], 
+    "property_name_in_charge": []
+    }, 
+
     {
-        "agent_name": "Chicago",
-        "agent_img": "https://cosplayfu-website.s3.amazonaws.com/_Upload/b/103947-Chicago-Cosplay-from-Azur-Lane-2.jpg",
-        "agent_code": "REN 45289",
-        "agent_work_states": [
-            "Chicago"
-        ],
-        "property_name_in_charge": []
-    },
-    {
-        "agent_name": "California",
-        "agent_img": "https://i.namu.wiki/i/ILyLYkHmLyOEnx1PKv8-twDZxvSIbUjVWRekWkAHvhpUdK0Mf9T-djxhtxTdQSpo4rNddv3BjbIYUISIujYAeg.webp",
-        "agent_code": "REN 45290",
-        "agent_work_states": [
-            "California"
-        ],
-        "property_name_in_charge": []
-    },
-    {
-        "agent_name": "New Jersey",
-        "agent_img": "https://c4.wallpaperflare.com/wallpaper/157/770/401/azur-lane-new-jersey-azur-lane-hd-wallpaper-preview.jpg",
-        "agent_code": "REN 45291",
-        "agent_work_states": [
-            "New Jersey"
-        ],
-        "property_name_in_charge": []
-    },
-    {
-        "agent_name": "Enterprise",
-        "agent_img": "https://prompthero.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWxoTUdJeFlXVTFZeTFpT0RrMkxUUXhaR1l0T0RRME5pMDFNVGN3WkRObU16YzNaVFFHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--5f9e0cb79f7215d19daaf1076879c4fa57ac532b/28156297.jpeg",
-        "agent_code": "REN 45292",
-        "agent_work_states": [
-            "New Jersey",
-            "Washington DC"
-        ],
-        "property_name_in_charge": []
+    "agent_name": "Jerome", 
+    "agent_img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOO_TZ5HWwGZSKmQLwgbfkgtkD_HvnkTBpQQ&s",     
+    "agent_code": "REN 45291", 
+    "agent_work_states": ["New Jersey"], 
+    "property_name_in_charge": ["Upper Mountain Avenue"]
+    }, 
+
+    {"agent_name": "Marie", 
+    "agent_img": "https://www.shutterstock.com/image-photo/real-estate-agent-holding-key-260nw-2425636101.jpg", 
+    "agent_code": "REN 45292", 
+    "agent_work_states": ["New Jersey", "Washington DC"], 
+    "property_name_in_charge": []
     }
 ]
